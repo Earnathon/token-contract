@@ -281,7 +281,8 @@ interface TokenRecipient {
 contract ENAToken is BurnableToken, Ownable {
     string public constant name = "Earnathon Token";
     string public constant symbol = "ENA";
-    uint256 public constant decimals = 18;
+    uint public constant decimals = 8;
+
     // there is no problem in using * here instead of .mul()
     uint256 public constant initialSupply =
         1000000000 * (10**uint256(decimals));
